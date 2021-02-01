@@ -1,5 +1,4 @@
 import React from "react";
-import {Second} from './Second.js'
 
 export function Third(props){
     let number = parseInt(props.squaredNumber)
