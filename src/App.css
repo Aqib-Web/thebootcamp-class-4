@@ -1,11 +1,15 @@
-.box{
-  height: 500px;
+body{
+  padding : 1em
 }
 
-.dayTime{
+.box{
+  height : 500px;
+}
+
+.dayLight{
   background-color: orange;
 }
 
-.nightTime{
+.nightLight{
   background-color: lightgray;
 }

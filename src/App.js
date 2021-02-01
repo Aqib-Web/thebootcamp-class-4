@@ -1,26 +1,28 @@
 import React, {useState} from 'react';
-import {Message} from './Message.js'
-import './App.css';
+import {Second} from './Second.js';
+import "./App.css"
 
-function App() {
+function App(){
   let [number, setNumber] = useState(0);
-  let [isMorning, setMorning] = useState(false);
-  return (
-    <div className={`box ${isMorning ? "dayTime" : "nightTime"}`}>
-      <h1>It is {isMorning ? "Morning" : "Night"}!</h1>
-      <Message counter={number}/>
+  let [isMorning, setMorning] = useState(false)
+  return(
+    <div className={`box ${isMorning ? "dayLight" : "nightLight"}`}>
+      <hr/>
+      <h1>Good {isMorning ? "Morning" : "Night"}!</h1>
+      <hr/>
       <br/>
-      <button onClick={ 
-        ()=> setNumber(number + 2)
-      }>
-      Click me
-      </button>
-        <hr/>
-      <button onClick={()=>setMorning(!isMorning)}>Change Time
-      </button>
+      <Second numberCount={number} />
+
+      <button onClick={()=>
+        setNumber(++number)
+      }>Counter</button>
+      
+      <button onClick={()=>setMorning(!isMorning)}>Switch Time</button>
     </div>
 
   );
+
 }
+
 
 export default App;
