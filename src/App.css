@@ -1,0 +1,11 @@
+.box{
+  height: 500px;
+}
+
+.dayTime{
+  background-color: orange;
+}
+
+.nightTime{
+  background-color: lightgray;
+}
